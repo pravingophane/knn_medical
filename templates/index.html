@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+              background-image: url('https://th.bing.com/th/id/OIP.dglcTTDc8kEajaIyboRTQAHaHH?pid=ImgDet&w=971&h=934&rs=1');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance Charges Premium Prediction</title>
+</head>
+
+<body style="background-color: rgb(223, 233, 222);">
+
+    <h1> ~*Medical Insurance Premium Prediction By Using KNN*~ </h1>
+    <form method="POST" action="/predict_premium">
+
+        <label><b>Age:</b></label>
+        <input type = "text" name = "age">
+        </select>
+
+        <br>
+        <br>
+
+        <label><b>Sex:</b></label>
+        <select name = "sex">
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label><b>BMI:</b></label>
+        <input type = "text" name = "bmi">
+        </select>
+
+        <br>
+        <br>
+
+        <label><b>Children:</b></label>
+        <input type = "text" name = "children">
+        </select>
+
+        <br>
+        <br>
+
+        <label><b>Smoker:</b></label>
+        <label>Yes:</label> <input type = "radio" name= "smoker" value = "yes">
+        <label>No:</label> <input type = "radio" name= "smoker" value = "no">
+
+        <br>
+        <br>
+
+        <label><b>Region:</b></label>
+        <select name = "region">
+            <option value = "northeast">Northeast</option>
+            <option value = "southeast">Southeast</option>
+            <option value = "northwest">Northwest</option>
+            <option value = "southwest">Southwest</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <p>Your insurance premium charges will be <b> {{ prediction }} /- Rs.</b> Only </p>
+
+
+    </form>
+
+
+</body>
+</html>
